@@ -5,9 +5,9 @@
 - [x] Data Engineering Zoomcamp
 - [x] DE Zoomcamp 1.1.1 - Introduction to Google Cloud Platform
 - [x] DE Zoomcamp 1.2.1 - Introduction to Docker
-- [ ] DE Zoomcamp 1.2.2 - Ingesting NY Taxi Data to Postgres
-- [ ] DE Zoomcamp 1.2.2 - Optional: Connecting to Postgres with Jupyter and Pandas
-- [ ] DE Zoomcamp 1.2.3 - Connecting pgAdmin and Postgres
+- [x] DE Zoomcamp 1.2.2 - Ingesting NY Taxi Data to Postgres
+- [x] DE Zoomcamp 1.2.2 - Optional: Connecting to Postgres with Jupyter and Pandas
+- [x] DE Zoomcamp 1.2.3 - Connecting pgAdmin and Postgres
 - [ ] DE Zoomcamp 1.2.4 - Dockerizing the Ingestion Script
 - [ ] DE Zoomcamp 1.2.5 - Running Postgres and pgAdmin with Docker-Compose
 - [ ] DE Zoomcamp 1.2.6 - SQL Refreshser
