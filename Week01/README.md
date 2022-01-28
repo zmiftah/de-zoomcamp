@@ -51,3 +51,27 @@ docker run -it \
   --network=pg-network \
   --name pgdb \
   postgres:13
+
+jupyter nbconvert --to=script play-with-taxi-data.ipynb
+
+python ingest_data.py \
+  --user=root \
+  --password=root \
+  --host=localhost \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=yellow_taxi_trips \
+  --url=https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2021-01.csv
+
+docker build -t taxi_ingest:v01 .
+
+docker run -it \
+  --network=pg-network \
+  taxi_ingest:v01 \
+  --user=root \
+  --password=root \
+  --host=pgdb \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=yellow_taxi_trips \
+  --url=https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2021-01.csv
